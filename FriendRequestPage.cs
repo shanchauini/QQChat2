@@ -14,16 +14,16 @@ namespace QQChat
             InitializeComponent();
             this.currentUserId = userId;
         }
-        public FriendRequestPage() // 为设计器保留
+        public FriendRequestPage() 
         {
             InitializeComponent();
-            this.currentUserId = -1; // 示例ID，实际应由登录用户确定
+            this.currentUserId = -1; // ID实际应由登录用户确定
         }
 
         private void FriendRequestPage_Load(object sender, EventArgs e)
         {
             if (currentUserId == -1 && !(this.DesignMode)){
-                 MessageBox.Show("错误：无法加载好友申请，未指定用户ID。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 MessageBox.Show("错误！未指定用户ID", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                  this.Close();
                  return;
             }
@@ -91,6 +91,11 @@ namespace QQChat
         private void btnRefreshRequests_Click(object sender, EventArgs e)
         {
             LoadReceivedFriendRequests();
+        }
+
+        private void dgvFriendRequestsReceived_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 } 

@@ -29,33 +29,34 @@ namespace QQChat
             // lblChatWith
             // 
             this.lblChatWith.AutoSize = true;
-            this.lblChatWith.Location = new System.Drawing.Point(12, 15);
+            this.lblChatWith.Location = new System.Drawing.Point(12, 14);
             this.lblChatWith.Name = "lblChatWith";
-            this.lblChatWith.Size = new System.Drawing.Size(80, 13);
+            this.lblChatWith.Size = new System.Drawing.Size(77, 12);
             this.lblChatWith.TabIndex = 0;
             this.lblChatWith.Text = "与[好友]聊天";
             // 
             // rtbChatHistory
             // 
-            this.rtbChatHistory.Location = new System.Drawing.Point(12, 40);
+            this.rtbChatHistory.Location = new System.Drawing.Point(12, 37);
             this.rtbChatHistory.Name = "rtbChatHistory";
             this.rtbChatHistory.ReadOnly = true;
-            this.rtbChatHistory.Size = new System.Drawing.Size(600, 300);
+            this.rtbChatHistory.Size = new System.Drawing.Size(600, 277);
             this.rtbChatHistory.TabIndex = 1;
             this.rtbChatHistory.Text = "";
+            this.rtbChatHistory.TextChanged += new System.EventHandler(this.rtbChatHistory_TextChanged);
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(12, 355);
+            this.txtMessage.Location = new System.Drawing.Point(12, 328);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(500, 20);
+            this.txtMessage.Size = new System.Drawing.Size(500, 21);
             this.txtMessage.TabIndex = 2;
             // 
             // btnSendMessage
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(520, 353);
+            this.btnSendMessage.Location = new System.Drawing.Point(520, 326);
             this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(90, 23);
+            this.btnSendMessage.Size = new System.Drawing.Size(90, 21);
             this.btnSendMessage.TabIndex = 3;
             this.btnSendMessage.Text = "发送消息";
             this.btnSendMessage.UseVisualStyleBackColor = true;
@@ -63,9 +64,9 @@ namespace QQChat
             // 
             // btnSendFile
             // 
-            this.btnSendFile.Location = new System.Drawing.Point(620, 353);
+            this.btnSendFile.Location = new System.Drawing.Point(620, 326);
             this.btnSendFile.Name = "btnSendFile";
-            this.btnSendFile.Size = new System.Drawing.Size(90, 23);
+            this.btnSendFile.Size = new System.Drawing.Size(90, 21);
             this.btnSendFile.TabIndex = 4;
             this.btnSendFile.Text = "发送文件";
             this.btnSendFile.UseVisualStyleBackColor = true;
@@ -74,9 +75,10 @@ namespace QQChat
             // lstFiles
             // 
             this.lstFiles.FormattingEnabled = true;
-            this.lstFiles.Location = new System.Drawing.Point(620, 40);
+            this.lstFiles.ItemHeight = 12;
+            this.lstFiles.Location = new System.Drawing.Point(620, 37);
             this.lstFiles.Name = "lstFiles";
-            this.lstFiles.Size = new System.Drawing.Size(160, 303);
+            this.lstFiles.Size = new System.Drawing.Size(160, 280);
             this.lstFiles.TabIndex = 5;
             this.lstFiles.DoubleClick += new System.EventHandler(this.lstFiles_DoubleClick);
             // 
@@ -86,9 +88,9 @@ namespace QQChat
             // 
             // UserConversationPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.ClientSize = new System.Drawing.Size(800, 369);
             this.Controls.Add(this.lstFiles);
             this.Controls.Add(this.btnSendFile);
             this.Controls.Add(this.btnSendMessage);
@@ -100,6 +102,7 @@ namespace QQChat
             this.Load += new System.EventHandler(this.UserConversationPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

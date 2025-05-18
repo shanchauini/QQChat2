@@ -47,35 +47,35 @@ namespace QQChat
             this.miLogout});
             this.menuStripAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuStripAdmin.Name = "menuStripAdmin";
-            this.menuStripAdmin.Size = new System.Drawing.Size(1510, 48);
+            this.menuStripAdmin.Size = new System.Drawing.Size(1510, 39);
             this.menuStripAdmin.TabIndex = 0;
             this.menuStripAdmin.Text = "menuStrip1";
             // 
             // miReviewRegistration
             // 
             this.miReviewRegistration.Name = "miReviewRegistration";
-            this.miReviewRegistration.Size = new System.Drawing.Size(130, 44);
+            this.miReviewRegistration.Size = new System.Drawing.Size(130, 35);
             this.miReviewRegistration.Text = "审核注册";
             this.miReviewRegistration.Click += new System.EventHandler(this.miReviewRegistration_Click);
             // 
             // miBanAccount
             // 
             this.miBanAccount.Name = "miBanAccount";
-            this.miBanAccount.Size = new System.Drawing.Size(130, 44);
+            this.miBanAccount.Size = new System.Drawing.Size(130, 35);
             this.miBanAccount.Text = "账号管理";
             this.miBanAccount.Click += new System.EventHandler(this.miBanAccount_Click);
             // 
             // miManageMessages
             // 
             this.miManageMessages.Name = "miManageMessages";
-            this.miManageMessages.Size = new System.Drawing.Size(130, 44);
+            this.miManageMessages.Size = new System.Drawing.Size(130, 35);
             this.miManageMessages.Text = "消息管理";
             this.miManageMessages.Click += new System.EventHandler(this.miManageMessages_Click);
             // 
             // miLogout
             // 
             this.miLogout.Name = "miLogout";
-            this.miLogout.Size = new System.Drawing.Size(130, 44);
+            this.miLogout.Size = new System.Drawing.Size(130, 35);
             this.miLogout.Text = "退出登录";
             this.miLogout.Click += new System.EventHandler(this.miLogout_Click);
             // 
@@ -89,6 +89,7 @@ namespace QQChat
             this.Name = "AdminMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员主页";
+            this.Load += new System.EventHandler(this.AdminMainPage_Load_1);
             this.menuStripAdmin.ResumeLayout(false);
             this.menuStripAdmin.PerformLayout();
             this.ResumeLayout(false);

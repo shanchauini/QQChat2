@@ -74,5 +74,10 @@ namespace QQChat
         {
             LoadFriendList();
         }
+
+        private void dgvFriendList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 } 

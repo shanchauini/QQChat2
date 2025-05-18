@@ -65,5 +65,10 @@ namespace QQChat
         {
             Application.Exit();
         }
+
+        private void UserMainPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 } 

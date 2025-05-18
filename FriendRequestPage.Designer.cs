@@ -29,19 +29,21 @@ namespace QQChat
             this.dgvFriendRequestsReceived.AllowUserToAddRows = false;
             this.dgvFriendRequestsReceived.AllowUserToDeleteRows = false;
             this.dgvFriendRequestsReceived.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFriendRequestsReceived.Location = new System.Drawing.Point(12, 12);
+            this.dgvFriendRequestsReceived.Location = new System.Drawing.Point(12, 11);
             this.dgvFriendRequestsReceived.MultiSelect = false;
             this.dgvFriendRequestsReceived.Name = "dgvFriendRequestsReceived";
             this.dgvFriendRequestsReceived.ReadOnly = true;
+            this.dgvFriendRequestsReceived.RowHeadersWidth = 82;
             this.dgvFriendRequestsReceived.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFriendRequestsReceived.Size = new System.Drawing.Size(776, 350);
+            this.dgvFriendRequestsReceived.Size = new System.Drawing.Size(776, 323);
             this.dgvFriendRequestsReceived.TabIndex = 0;
+            this.dgvFriendRequestsReceived.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFriendRequestsReceived_CellContentClick);
             // 
             // btnAcceptRequest
             // 
-            this.btnAcceptRequest.Location = new System.Drawing.Point(12, 380);
+            this.btnAcceptRequest.Location = new System.Drawing.Point(12, 351);
             this.btnAcceptRequest.Name = "btnAcceptRequest";
-            this.btnAcceptRequest.Size = new System.Drawing.Size(100, 30);
+            this.btnAcceptRequest.Size = new System.Drawing.Size(100, 28);
             this.btnAcceptRequest.TabIndex = 1;
             this.btnAcceptRequest.Text = "接受申请";
             this.btnAcceptRequest.UseVisualStyleBackColor = true;
@@ -49,9 +51,9 @@ namespace QQChat
             // 
             // btnDeclineRequest
             // 
-            this.btnDeclineRequest.Location = new System.Drawing.Point(132, 380);
+            this.btnDeclineRequest.Location = new System.Drawing.Point(132, 351);
             this.btnDeclineRequest.Name = "btnDeclineRequest";
-            this.btnDeclineRequest.Size = new System.Drawing.Size(100, 30);
+            this.btnDeclineRequest.Size = new System.Drawing.Size(100, 28);
             this.btnDeclineRequest.TabIndex = 2;
             this.btnDeclineRequest.Text = "拒绝申请";
             this.btnDeclineRequest.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@ namespace QQChat
             // btnRefreshRequests
             // 
             this.btnRefreshRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshRequests.Location = new System.Drawing.Point(688, 380);
+            this.btnRefreshRequests.Location = new System.Drawing.Point(688, 351);
             this.btnRefreshRequests.Name = "btnRefreshRequests";
-            this.btnRefreshRequests.Size = new System.Drawing.Size(100, 30);
+            this.btnRefreshRequests.Size = new System.Drawing.Size(100, 28);
             this.btnRefreshRequests.TabIndex = 3;
             this.btnRefreshRequests.Text = "刷新列表";
             this.btnRefreshRequests.UseVisualStyleBackColor = true;
@@ -70,9 +72,9 @@ namespace QQChat
             // 
             // FriendRequestPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.btnRefreshRequests);
             this.Controls.Add(this.btnDeclineRequest);
             this.Controls.Add(this.btnAcceptRequest);
@@ -82,6 +84,7 @@ namespace QQChat
             this.Load += new System.EventHandler(this.FriendRequestPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFriendRequestsReceived)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

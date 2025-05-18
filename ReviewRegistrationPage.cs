@@ -7,7 +7,7 @@ namespace QQChat
 {
     public partial class ReviewRegistrationPage : Form
     {
-        // private string connectionString = "..."; // 数据库连接字符串
+        
 
         public ReviewRegistrationPage()
         {
@@ -61,6 +61,11 @@ namespace QQChat
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadPendingRegistrations();
+        }
+
+        private void dgvPendingRegistrations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 } 

@@ -29,19 +29,21 @@ namespace QQChat
             this.dgvFriendList.AllowUserToAddRows = false;
             this.dgvFriendList.AllowUserToDeleteRows = false;
             this.dgvFriendList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFriendList.Location = new System.Drawing.Point(12, 12);
+            this.dgvFriendList.Location = new System.Drawing.Point(12, 11);
             this.dgvFriendList.MultiSelect = false;
             this.dgvFriendList.Name = "dgvFriendList";
             this.dgvFriendList.ReadOnly = true;
+            this.dgvFriendList.RowHeadersWidth = 82;
             this.dgvFriendList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFriendList.Size = new System.Drawing.Size(776, 350);
+            this.dgvFriendList.Size = new System.Drawing.Size(776, 323);
             this.dgvFriendList.TabIndex = 0;
+            this.dgvFriendList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFriendList_CellContentClick);
             // 
             // btnDeleteFriend
             // 
-            this.btnDeleteFriend.Location = new System.Drawing.Point(12, 380);
+            this.btnDeleteFriend.Location = new System.Drawing.Point(12, 351);
             this.btnDeleteFriend.Name = "btnDeleteFriend";
-            this.btnDeleteFriend.Size = new System.Drawing.Size(100, 30);
+            this.btnDeleteFriend.Size = new System.Drawing.Size(100, 28);
             this.btnDeleteFriend.TabIndex = 1;
             this.btnDeleteFriend.Text = "删除好友";
             this.btnDeleteFriend.UseVisualStyleBackColor = true;
@@ -49,9 +51,9 @@ namespace QQChat
             // 
             // btnChatWithFriend
             // 
-            this.btnChatWithFriend.Location = new System.Drawing.Point(132, 380);
+            this.btnChatWithFriend.Location = new System.Drawing.Point(132, 351);
             this.btnChatWithFriend.Name = "btnChatWithFriend";
-            this.btnChatWithFriend.Size = new System.Drawing.Size(100, 30);
+            this.btnChatWithFriend.Size = new System.Drawing.Size(100, 28);
             this.btnChatWithFriend.TabIndex = 2;
             this.btnChatWithFriend.Text = "发起聊天";
             this.btnChatWithFriend.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@ namespace QQChat
             // btnRefreshFriendList
             // 
             this.btnRefreshFriendList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshFriendList.Location = new System.Drawing.Point(688, 380);
+            this.btnRefreshFriendList.Location = new System.Drawing.Point(688, 351);
             this.btnRefreshFriendList.Name = "btnRefreshFriendList";
-            this.btnRefreshFriendList.Size = new System.Drawing.Size(100, 30);
+            this.btnRefreshFriendList.Size = new System.Drawing.Size(100, 28);
             this.btnRefreshFriendList.TabIndex = 3;
             this.btnRefreshFriendList.Text = "刷新列表";
             this.btnRefreshFriendList.UseVisualStyleBackColor = true;
@@ -70,9 +72,9 @@ namespace QQChat
             // 
             // FriendListPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.btnRefreshFriendList);
             this.Controls.Add(this.btnChatWithFriend);
             this.Controls.Add(this.btnDeleteFriend);
@@ -82,6 +84,7 @@ namespace QQChat
             this.Load += new System.EventHandler(this.FriendListPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFriendList)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -29,19 +29,21 @@ namespace QQChat
             this.dgvPendingRegistrations.AllowUserToAddRows = false;
             this.dgvPendingRegistrations.AllowUserToDeleteRows = false;
             this.dgvPendingRegistrations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPendingRegistrations.Location = new System.Drawing.Point(12, 12);
+            this.dgvPendingRegistrations.Location = new System.Drawing.Point(12, 11);
             this.dgvPendingRegistrations.MultiSelect = false;
             this.dgvPendingRegistrations.Name = "dgvPendingRegistrations";
             this.dgvPendingRegistrations.ReadOnly = true;
+            this.dgvPendingRegistrations.RowHeadersWidth = 82;
             this.dgvPendingRegistrations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPendingRegistrations.Size = new System.Drawing.Size(776, 350);
+            this.dgvPendingRegistrations.Size = new System.Drawing.Size(776, 323);
             this.dgvPendingRegistrations.TabIndex = 0;
+            this.dgvPendingRegistrations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPendingRegistrations_CellContentClick);
             // 
             // btnApprove
             // 
-            this.btnApprove.Location = new System.Drawing.Point(12, 380);
+            this.btnApprove.Location = new System.Drawing.Point(12, 351);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(100, 30);
+            this.btnApprove.Size = new System.Drawing.Size(100, 28);
             this.btnApprove.TabIndex = 1;
             this.btnApprove.Text = "批准";
             this.btnApprove.UseVisualStyleBackColor = true;
@@ -49,9 +51,9 @@ namespace QQChat
             // 
             // btnReject
             // 
-            this.btnReject.Location = new System.Drawing.Point(132, 380);
+            this.btnReject.Location = new System.Drawing.Point(132, 351);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(100, 30);
+            this.btnReject.Size = new System.Drawing.Size(100, 28);
             this.btnReject.TabIndex = 2;
             this.btnReject.Text = "驳回";
             this.btnReject.UseVisualStyleBackColor = true;
@@ -60,9 +62,9 @@ namespace QQChat
             // btnRefresh
             // 
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.Location = new System.Drawing.Point(688, 380);
+            this.btnRefresh.Location = new System.Drawing.Point(688, 351);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(100, 30);
+            this.btnRefresh.Size = new System.Drawing.Size(100, 28);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "刷新列表";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -70,9 +72,9 @@ namespace QQChat
             // 
             // ReviewRegistrationPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnApprove);
@@ -82,6 +84,7 @@ namespace QQChat
             this.Load += new System.EventHandler(this.ReviewRegistrationPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendingRegistrations)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

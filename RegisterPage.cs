@@ -7,7 +7,7 @@ namespace QQChat
 {
     public partial class RegisterPage : Form
     {
-        // private string connectionString = "Server=your_server;Database=your_database;Uid=your_user;Pwd=your_password;"; // 替换为你的数据库连接字符串
+        
 
         public RegisterPage()
         {
@@ -85,7 +85,7 @@ namespace QQChat
         {
             this.Close(); // 关闭当前注册窗口，登录窗口应该还在后面
             // 如果登录窗口被隐藏了，需要找到它并显示，或者重新创建一个 LoginPage 实例
-            // Application.OpenForms["LoginPage"]?.Show(); 
+             
         }
 
         private bool IsValidEmail(string email)

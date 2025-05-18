@@ -30,24 +30,24 @@ namespace QQChat
             // lblSearchUser
             // 
             this.lblSearchUser.AutoSize = true;
-            this.lblSearchUser.Location = new System.Drawing.Point(12, 15);
+            this.lblSearchUser.Location = new System.Drawing.Point(12, 14);
             this.lblSearchUser.Name = "lblSearchUser";
-            this.lblSearchUser.Size = new System.Drawing.Size(83, 13);
+            this.lblSearchUser.Size = new System.Drawing.Size(101, 12);
             this.lblSearchUser.TabIndex = 0;
             this.lblSearchUser.Text = "搜索用户(ID/名):";
             // 
             // txtSearchUser
             // 
-            this.txtSearchUser.Location = new System.Drawing.Point(101, 12);
+            this.txtSearchUser.Location = new System.Drawing.Point(101, 11);
             this.txtSearchUser.Name = "txtSearchUser";
-            this.txtSearchUser.Size = new System.Drawing.Size(200, 20);
+            this.txtSearchUser.Size = new System.Drawing.Size(200, 21);
             this.txtSearchUser.TabIndex = 1;
             // 
             // btnSearchUser
             // 
-            this.btnSearchUser.Location = new System.Drawing.Point(307, 10);
+            this.btnSearchUser.Location = new System.Drawing.Point(307, 9);
             this.btnSearchUser.Name = "btnSearchUser";
-            this.btnSearchUser.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchUser.Size = new System.Drawing.Size(75, 21);
             this.btnSearchUser.TabIndex = 2;
             this.btnSearchUser.Text = "搜索";
             this.btnSearchUser.UseVisualStyleBackColor = true;
@@ -58,19 +58,21 @@ namespace QQChat
             this.dgvUsers.AllowUserToAddRows = false;
             this.dgvUsers.AllowUserToDeleteRows = false;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(12, 45);
+            this.dgvUsers.Location = new System.Drawing.Point(12, 42);
             this.dgvUsers.MultiSelect = false;
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
+            this.dgvUsers.RowHeadersWidth = 82;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(776, 317);
+            this.dgvUsers.Size = new System.Drawing.Size(776, 293);
             this.dgvUsers.TabIndex = 3;
+            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             // 
             // btnBanUser
             // 
-            this.btnBanUser.Location = new System.Drawing.Point(12, 380);
+            this.btnBanUser.Location = new System.Drawing.Point(12, 351);
             this.btnBanUser.Name = "btnBanUser";
-            this.btnBanUser.Size = new System.Drawing.Size(100, 30);
+            this.btnBanUser.Size = new System.Drawing.Size(100, 28);
             this.btnBanUser.TabIndex = 4;
             this.btnBanUser.Text = "禁止选中用户";
             this.btnBanUser.UseVisualStyleBackColor = true;
@@ -78,9 +80,9 @@ namespace QQChat
             // 
             // btnUnbanUser
             // 
-            this.btnUnbanUser.Location = new System.Drawing.Point(132, 380);
+            this.btnUnbanUser.Location = new System.Drawing.Point(132, 351);
             this.btnUnbanUser.Name = "btnUnbanUser";
-            this.btnUnbanUser.Size = new System.Drawing.Size(100, 30);
+            this.btnUnbanUser.Size = new System.Drawing.Size(100, 28);
             this.btnUnbanUser.TabIndex = 5;
             this.btnUnbanUser.Text = "解禁选中用户";
             this.btnUnbanUser.UseVisualStyleBackColor = true;
@@ -89,9 +91,9 @@ namespace QQChat
             // btnRefreshUserList
             // 
             this.btnRefreshUserList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshUserList.Location = new System.Drawing.Point(688, 380);
+            this.btnRefreshUserList.Location = new System.Drawing.Point(688, 351);
             this.btnRefreshUserList.Name = "btnRefreshUserList";
-            this.btnRefreshUserList.Size = new System.Drawing.Size(100, 30);
+            this.btnRefreshUserList.Size = new System.Drawing.Size(100, 28);
             this.btnRefreshUserList.TabIndex = 6;
             this.btnRefreshUserList.Text = "刷新列表";
             this.btnRefreshUserList.UseVisualStyleBackColor = true;
@@ -99,9 +101,9 @@ namespace QQChat
             // 
             // BanAccountPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.btnRefreshUserList);
             this.Controls.Add(this.btnUnbanUser);
             this.Controls.Add(this.btnBanUser);
@@ -115,6 +117,7 @@ namespace QQChat
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

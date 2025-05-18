@@ -7,8 +7,7 @@ namespace QQChat
 {
     public partial class ManageMessagePage : Form
     {
-        // private string connectionString = "...";
-
+       
         public ManageMessagePage()
         {
             InitializeComponent();
@@ -64,6 +63,11 @@ namespace QQChat
             txtSearchContent.Clear();
             txtSearchSenderId.Clear();
             LoadMessages();
+        }
+
+        private void dgvMessages_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 } 

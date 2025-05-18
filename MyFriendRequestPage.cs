@@ -7,7 +7,7 @@ namespace QQChat
 {
     public partial class MyFriendRequestPage : Form
     {
-        // private string connectionString = "...";
+      
         private int currentUserId; // 当前登录用户ID
 
         public MyFriendRequestPage(int userId)
@@ -104,6 +104,11 @@ namespace QQChat
         private void btnRefreshMySentRequests_Click(object sender, EventArgs e)
         {
             LoadMySentRequests();
+        }
+
+        private void dgvMySentRequests_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 } 

@@ -107,5 +107,10 @@ namespace QQChat
             dtpEndTime.Value = DateTime.Now;
             LoadHistoryMessages();
         }
+
+        private void dgvHistoryMessages_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 } 

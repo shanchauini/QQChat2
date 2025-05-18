@@ -35,8 +35,8 @@ namespace QQChat
             this.Close();
         }
 
-        // 为了使 MdiParent 生效, AdminMainPage 需要设置 IsMdiContainer = true
-        // 这通常在窗体的构造函数或者 Load 事件中设置，或者直接在设计器中设置其属性
+        // AdminMainPage 需要设置 IsMdiContainer = true
+       
         private void AdminMainPage_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
@@ -45,6 +45,11 @@ namespace QQChat
         private void AdminMainPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void AdminMainPage_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 } 

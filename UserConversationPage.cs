@@ -54,9 +54,9 @@ namespace QQChat
 
         private void LoadFileList()
         {
-            // TODO: 从数据库加载当前会话的文件消息
+            // 从数据库加载当前会话的文件消息
             lstFiles.Items.Clear();
-            // 不再添加任何示例文件
+           
         }
 
         private void btnSendMessage_Click(object sender, EventArgs e)
@@ -90,8 +90,8 @@ namespace QQChat
             {
                 string filePath = openFileDialog.FileName;
                 string fileName = Path.GetFileName(filePath);
-                // TODO: 保存文件到服务器/指定目录，并插入 Files 和 Messages 表
-                // 示例：INSERT INTO Files (FileName, FilePath) ... 然后 INSERT INTO Messages (..., FileId, MessageType='File')
+                // 保存文件到服务器/指定目录，并插入 Files 和 Messages 表
+                // INSERT INTO Files (FileName, FilePath) ... 然后 INSERT INTO Messages (..., FileId, MessageType='File')
                 rtbChatHistory.AppendText($"我: 发送了文件 [文件: {fileName}]\n");
                 lstFiles.Items.Add(fileName);
             }
@@ -102,11 +102,16 @@ namespace QQChat
             if (lstFiles.SelectedItem != null)
             {
                 string fileName = lstFiles.SelectedItem.ToString();
-                // TODO: 获取文件路径并打开
-                // 示例：SELECT FilePath FROM Files WHERE FileName = @fileName
+                // 获取文件路径并打开
+                // SELECT FilePath FROM Files WHERE FileName = @fileName
                 MessageBox.Show($"模拟打开文件: {fileName}", "提示");
                 // 实际可用 System.Diagnostics.Process.Start(filePath);
             }
+        }
+
+        private void rtbChatHistory_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 } 

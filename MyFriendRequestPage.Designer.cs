@@ -29,23 +29,24 @@ namespace QQChat
             // lblSearchUserForRequest
             // 
             this.lblSearchUserForRequest.AutoSize = true;
-            this.lblSearchUserForRequest.Location = new System.Drawing.Point(12, 15);
+            this.lblSearchUserForRequest.Location = new System.Drawing.Point(12, 14);
             this.lblSearchUserForRequest.Name = "lblSearchUserForRequest";
+            this.lblSearchUserForRequest.Size = new System.Drawing.Size(119, 12);
             this.lblSearchUserForRequest.TabIndex = 0;
             this.lblSearchUserForRequest.Text = "搜索用户ID添加好友:";
             // 
             // txtSearchUserIdForRequest
             // 
-            this.txtSearchUserIdForRequest.Location = new System.Drawing.Point(143, 12);
+            this.txtSearchUserIdForRequest.Location = new System.Drawing.Point(143, 11);
             this.txtSearchUserIdForRequest.Name = "txtSearchUserIdForRequest";
-            this.txtSearchUserIdForRequest.Size = new System.Drawing.Size(150, 20);
+            this.txtSearchUserIdForRequest.Size = new System.Drawing.Size(150, 21);
             this.txtSearchUserIdForRequest.TabIndex = 1;
             // 
             // btnSearchAndAddUser
             // 
-            this.btnSearchAndAddUser.Location = new System.Drawing.Point(300, 10);
+            this.btnSearchAndAddUser.Location = new System.Drawing.Point(300, 9);
             this.btnSearchAndAddUser.Name = "btnSearchAndAddUser";
-            this.btnSearchAndAddUser.Size = new System.Drawing.Size(100, 23);
+            this.btnSearchAndAddUser.Size = new System.Drawing.Size(100, 21);
             this.btnSearchAndAddUser.TabIndex = 2;
             this.btnSearchAndAddUser.Text = "搜索并申请";
             this.btnSearchAndAddUser.UseVisualStyleBackColor = true;
@@ -54,8 +55,9 @@ namespace QQChat
             // lblMySentRequests
             // 
             this.lblMySentRequests.AutoSize = true;
-            this.lblMySentRequests.Location = new System.Drawing.Point(12, 50);
+            this.lblMySentRequests.Location = new System.Drawing.Point(12, 46);
             this.lblMySentRequests.Name = "lblMySentRequests";
+            this.lblMySentRequests.Size = new System.Drawing.Size(107, 12);
             this.lblMySentRequests.TabIndex = 3;
             this.lblMySentRequests.Text = "我发送的好友申请:";
             // 
@@ -64,20 +66,22 @@ namespace QQChat
             this.dgvMySentRequests.AllowUserToAddRows = false;
             this.dgvMySentRequests.AllowUserToDeleteRows = false;
             this.dgvMySentRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMySentRequests.Location = new System.Drawing.Point(12, 70);
+            this.dgvMySentRequests.Location = new System.Drawing.Point(12, 65);
             this.dgvMySentRequests.MultiSelect = false;
             this.dgvMySentRequests.Name = "dgvMySentRequests";
             this.dgvMySentRequests.ReadOnly = true;
+            this.dgvMySentRequests.RowHeadersWidth = 82;
             this.dgvMySentRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMySentRequests.Size = new System.Drawing.Size(776, 292);
+            this.dgvMySentRequests.Size = new System.Drawing.Size(776, 270);
             this.dgvMySentRequests.TabIndex = 4;
+            this.dgvMySentRequests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMySentRequests_CellContentClick);
             // 
             // btnRefreshMySentRequests
             // 
             this.btnRefreshMySentRequests.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefreshMySentRequests.Location = new System.Drawing.Point(688, 380);
+            this.btnRefreshMySentRequests.Location = new System.Drawing.Point(688, 351);
             this.btnRefreshMySentRequests.Name = "btnRefreshMySentRequests";
-            this.btnRefreshMySentRequests.Size = new System.Drawing.Size(100, 30);
+            this.btnRefreshMySentRequests.Size = new System.Drawing.Size(100, 28);
             this.btnRefreshMySentRequests.TabIndex = 5;
             this.btnRefreshMySentRequests.Text = "刷新列表";
             this.btnRefreshMySentRequests.UseVisualStyleBackColor = true;
@@ -85,9 +89,9 @@ namespace QQChat
             // 
             // MyFriendRequestPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.btnRefreshMySentRequests);
             this.Controls.Add(this.dgvMySentRequests);
             this.Controls.Add(this.lblMySentRequests);
@@ -100,6 +104,7 @@ namespace QQChat
             ((System.ComponentModel.ISupportInitialize)(this.dgvMySentRequests)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

@@ -7,8 +7,8 @@ namespace QQChat
 {
     public partial class ManagePersonInfoPage : Form
     {
-        // private string connectionString = "...";
-        private int currentUserId; // 假设从登录时获取并传递过来
+       
+        private int currentUserId; // 从登录时获取并传递过来
 
         // 构造函数接收当前用户ID
         public ManagePersonInfoPage(int userId)
@@ -22,8 +22,7 @@ namespace QQChat
             InitializeComponent();
             // MessageBox.Show("错误：未指定用户信息！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             // this.Close(); 
-            // 为了设计器兼容，保留一个无参构造函数，但在实际运行时应使用带userId的构造函数
-            // 在实际应用中，通常 UserMainPage 在打开此页面时传递 UserId
+          
              this.currentUserId = -1; // 表示无效用户
         }
 

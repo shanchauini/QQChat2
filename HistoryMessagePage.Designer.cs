@@ -129,6 +129,7 @@ namespace QQChat
             this.dgvHistoryMessages.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHistoryMessages.Size = new System.Drawing.Size(776, 293);
             this.dgvHistoryMessages.TabIndex = 10;
+            this.dgvHistoryMessages.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistoryMessages_CellContentClick);
             // 
             // btnDeleteHistoryMessage
             // 

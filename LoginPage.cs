@@ -6,7 +6,7 @@ namespace QQChat
 {
     public partial class LoginPage : Form
     {
-        // private string connectionString = "Server=your_server;Database=your_database;Uid=your_user;Pwd=your_password;"; // 替换为你的数据库连接字符串
+        
 
         public LoginPage()
         {
@@ -31,7 +31,7 @@ namespace QQChat
                     MessageBox.Show("管理员登录成功!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminMainPage adminMainPage = new AdminMainPage();
                     adminMainPage.Show();
-                    this.Hide(); // 或者 this.Close(); 根据需求
+                    this.Hide(); 
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace QQChat
         {
             RegisterPage registerPage = new RegisterPage();
             registerPage.Show();
-            // 可以选择关闭登录窗口或隐藏，取决于产品设计
+            // 可以选择关闭登录窗口或隐藏
             // this.Hide(); 
         }
 
