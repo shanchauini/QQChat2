@@ -92,6 +92,8 @@ namespace QQChat
                 string fileName = Path.GetFileName(filePath);
                 // 保存文件到服务器/指定目录，并插入 Files 和 Messages 表
                 // INSERT INTO Files (FileName, FilePath) ... 然后 INSERT INTO Messages (..., FileId, MessageType='File')
+
+
                 rtbChatHistory.AppendText($"我: 发送了文件 [文件: {fileName}]\n");
                 lstFiles.Items.Add(fileName);
             }
@@ -105,7 +107,8 @@ namespace QQChat
                 // 获取文件路径并打开
                 // SELECT FilePath FROM Files WHERE FileName = @fileName
                 MessageBox.Show($"模拟打开文件: {fileName}", "提示");
-                // 实际可用 System.Diagnostics.Process.Start(filePath);
+                // 实际可用
+                System.Diagnostics.Process.Start(filePath);
             }
         }
 

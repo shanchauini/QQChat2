@@ -40,7 +40,7 @@ namespace QQChat
                 int userId = Convert.ToInt32(dgvUsers.SelectedRows[0].Cells["UserId"].Value);
                 if (userId.ToString() == "0000")
                 {
-                    MessageBox.Show("不能操作管理员账号。", "错误");
+                    //MessageBox.Show("不能操作管理员账号。", "错误");
                     return;
                 }
                 string sql = "UPDATE Users SET IsBanned = @IsBanned WHERE UserId = @UserId";

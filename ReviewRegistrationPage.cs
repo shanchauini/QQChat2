@@ -21,6 +21,7 @@ namespace QQChat
 
         private void LoadPendingRegistrations()
         {
+            //注册列表信息绑定到Datagrid
             string sql = "SELECT UserId, UserName, Email, Gender FROM Users WHERE IsApproved = 0 AND IsBanned = 0";
             DataTable dt = DataAccess.ExecuteQuery(sql);
             dgvPendingRegistrations.DataSource = dt;
@@ -38,7 +39,7 @@ namespace QQChat
             }
             else
             {
-                MessageBox.Show("请先选择一个用户进行批准。", "提示");
+                MessageBox.Show("请先选择一个用户进行通过。", "提示");
             }
         }
 
@@ -46,6 +47,7 @@ namespace QQChat
         {
             if (dgvPendingRegistrations.SelectedRows.Count > 0)
             {
+                //注册申请驳回，删除该账号
                 int userId = Convert.ToInt32(dgvPendingRegistrations.SelectedRows[0].Cells["UserId"].Value);
                 string sql = "DELETE FROM Users WHERE UserId = @UserId AND IsApproved = 0";
                 var param = new MySqlParameter("@UserId", userId);
@@ -54,7 +56,7 @@ namespace QQChat
             }
             else
             {
-                MessageBox.Show("请先选择一个用户进行驳回操作。", "提示");
+                MessageBox.Show("请先选择一个用户进行驳回。", "提示");
             }
         }
 

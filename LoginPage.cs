@@ -41,7 +41,7 @@ namespace QQChat
             else // 普通用户登录
             {
                 string sql = "SELECT UserId, IsApproved, IsBanned FROM Users WHERE UserId = @UserId AND PSW = @PSW";
-                var p1 = new MySqlParameter("@UserId", username); // 账号输入框内容视为UserId
+                var p1 = new MySqlParameter("@UserId", username); // 账号输入框内容为UserId
                 var p2 = new MySqlParameter("@PSW", password);
                 var dt = DataAccess.ExecuteQuery(sql, p1, p2);
                 if (dt.Rows.Count > 0)
@@ -76,7 +76,7 @@ namespace QQChat
         {
             RegisterPage registerPage = new RegisterPage();
             registerPage.Show();
-            // 可以选择关闭登录窗口或隐藏
+            // 登录窗口也可以关闭或隐藏
             // this.Hide(); 
         }
 

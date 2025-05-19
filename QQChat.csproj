@@ -206,6 +206,9 @@
     <EmbeddedResource Include="ManageMessagePage.resx">
       <DependentUpon>ManageMessagePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagePersonInfoPage.resx">
+      <DependentUpon>ManagePersonInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFriendRequestPage.resx">
       <DependentUpon>MyFriendRequestPage.cs</DependentUpon>
     </EmbeddedResource>

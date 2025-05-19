@@ -47,7 +47,7 @@ namespace QQChat
             this.miLogout});
             this.menuStripAdmin.Location = new System.Drawing.Point(0, 0);
             this.menuStripAdmin.Name = "menuStripAdmin";
-            this.menuStripAdmin.Size = new System.Drawing.Size(1510, 39);
+            this.menuStripAdmin.Size = new System.Drawing.Size(1556, 48);
             this.menuStripAdmin.TabIndex = 0;
             this.menuStripAdmin.Text = "menuStrip1";
             // 
@@ -81,14 +81,18 @@ namespace QQChat
             // 
             // AdminMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1510, 933);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1556, 993);
             this.Controls.Add(this.menuStripAdmin);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripAdmin;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "AdminMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员主页";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AdminMainPage_Load_1);
             this.menuStripAdmin.ResumeLayout(false);
             this.menuStripAdmin.PerformLayout();

@@ -277,20 +277,22 @@ namespace QQChat
             this.miLogout});
             this.menuStripUser.Location = new System.Drawing.Point(0, 0);
             this.menuStripUser.Name = "menuStripUser";
-            this.menuStripUser.Size = new System.Drawing.Size(1708, 39);
+            this.menuStripUser.Size = new System.Drawing.Size(2884, 43);
             this.menuStripUser.TabIndex = 0;
             this.menuStripUser.Text = "menuStrip1";
             // 
             // UserMainPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1708, 701);
+            this.ClientSize = new System.Drawing.Size(2884, 1402);
             this.Controls.Add(this.menuStripUser);
             this.MainMenuStrip = this.menuStripUser;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "UserMainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户主页";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.UserMainPage_Load_1);
             this.menuStripUser.ResumeLayout(false);
             this.menuStripUser.PerformLayout();
